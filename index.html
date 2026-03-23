@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio Style Guide - Manmeet Sagri</title>
+
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Type & heading fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Manmeet Sagri's Portfolio Style Guide</h1>
+        <p>This style guide outlines the visual and interactive elements used in my portfolio website.</p>
+    </header>
+
+    <main>
+
+        <section class="element">
+            <h3>Main Header Navigation</h3>
+
+            <p><strong>Code:</strong></p>
+            <pre><code>
+          &lt;header class="site-header"&gt;
+            &lt;h1&gt;MANMEET SAGRI&lt;/h1&gt;
+            &lt;nav&gt;
+              &lt;a href="index.html"&gt;Home&lt;/a&gt;
+              &lt;a href="projects.html" aria-current="page"&gt;Projects&lt;/a&gt;
+              &lt;a href="about.html"&gt;About Me&lt;/a&gt;
+            &lt;/nav&gt;
+          &lt;/header&gt;
+            </code></pre>
+
+            <p><strong>Rendered:</strong></p>
+            <header class="site-header-demo">
+                <h1>MANMEET SAGRI</h1>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#projects" aria-current="page">Projects</a>
+                    <a href="#aboutMe">About Me</a>
+                </nav>
+            </header>
+        </section>
+
+
+        <section class="element">
+            <h3>Button</h3>
+
+            <p><strong>Code:</strong></p>
+            <pre><code>
+&lt;a href="#projects" class="button"&gt;View Projects&lt;/a&gt;
+        </code></pre>
+
+            <p><strong>Rendered:</strong></p>
+            <a href="#projects" class="button">View Projects</a>
+        </section>
+
+        <section class="element">
+            <h3>In-text Link</h3>
+
+            <p><strong>Code:</strong></p>
+            <pre><code>
+&lt;p&gt;Check out my &lt;a href="#projects"&gt;projects&lt;/a&gt; here.&lt;/p&gt;
+        </code></pre>
+
+            <p><strong>Rendered:</strong></p>
+            <p>Check out my <a href="#projects">projects</a> here.</p>
+        </section>
+
+        <section id="text_elements">
+            <h2>Text Elements</h2>
+
+            <section class="element">
+                <h3>Headings</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subheading&lt;/h3&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <div class="heading-examples">
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                </div>
+            </section>
+
+            <section class="element">
+                <h3>Paragraph</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;p&gt;Hello! I’m Manmeet Sagri, an undergraduate student at SFU’s School of Interactive Arts & Technology,..&lt;/p&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <p>
+                    Hello! I’m <strong>Manmeet Sagri</strong>, an undergraduate student at SFU’s School of Interactive Arts & Technology,
+                    specializing in design and development. I love working at the intersection of technology and
+                    creativity, bringing ideas to life through interactive, level-based games and digital experiences.
+                </p>
+
+                <p>
+                    My academic projects range from game development and creative coding simulations to responsive web
+                    prototypes, giving me hands-on experience in both technical and design-focused work. Alongside my
+                    studies, I explore photography, volunteering with community organizations and contributing freelance
+                    work to SFU’s The Peak newspaper.
+
+                </p>
+
+                <p>
+                    I’m always curious to learn something new, whether that’s refining my programming skills,
+                    experimenting with creative media, or documenting the world through my lens. No matter the medium,
+                    I’m passionate about creating work that feels engaging, personal, and true to my creativity.
+                </p>
+            </section>
+
+            <section class="element">
+                <h3>List</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="combined_elements">
+            <h2>Combined Elements</h2>
+
+            <section class="element">
+                <h3>Project Analysis</h3>
+
+                <p><strong>Code:</strong></p>
+                <pre><code>
+&lt;article class="project-card"&gt;
+  &lt;h3&gt;Project Title&lt;/h3&gt;
+  &lt;p&gt;Short description of the project.&lt;/p&gt;
+  &lt;a href="#" class="button"&gt;View Project&lt;/a&gt;
+&lt;/article&gt;
+        </code></pre>
+
+                <p><strong>Rendered:</strong></p>
+                <article class="project-card">
+                    <h3>Project Title</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button">View Project</a>
+                </article>
+            </section>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
