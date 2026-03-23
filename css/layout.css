@@ -48,11 +48,135 @@ pre {
 }
 
 /* =============== Project card example layout =============== */
+.project-analysis {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .project-analysis:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  .analysis-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+  }
+  
+  .analysis-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 2.5rem;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+  }
+  
+  .analysis-meta {
+    margin: 0.35rem 0;
+  }
+  
+  .analysis-right p {
+    margin-bottom: 1rem;
+    max-width: 65ch;
+  }
+  
+  .analysis-process {
+    margin-top: 2rem;
+  }
+  
+  .analysis-process h4,
+  .analysis-reflection h4 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .analysis-step {
+    margin: 2.5rem 0;
+  }
+  
+  .analysis-step h5 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1rem 0 1.25rem;
+  }
+  
+  .analysis-grid img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .analysis-reflection {
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 900px) {
+    .analysis-hero {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .analysis-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .analysis-title {
+      font-size: 2rem;
+    }
+  }
 
-.project-card {
-  max-width: 420px;
-}
 
+
+  .about-demo {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+  }
+  
+  .about-content h4 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    margin-bottom: 1rem;
+    max-width: 60ch;
+  }
+  
+  .about-content .button {
+    margin-top: 1rem;
+  }
 /* =============== Heading example spacing =============== */
 
 .heading-examples h1,
