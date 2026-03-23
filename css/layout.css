@@ -1,0 +1,93 @@
+/* =============== Page structure =============== */
+
+header,
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+main {
+  margin-bottom: 80px;
+}
+
+/* =============== Section spacing =============== */
+
+section {
+  margin-bottom: 64px;
+}
+
+.element {
+  margin: 40px 0;
+  padding-bottom: 28px;
+}
+
+/* =============== Navigation layout =============== */
+
+.site-header-demo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .site-header-demo h1 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .site-header-demo nav {
+    display: flex;
+    gap: 30px;
+  }
+
+/* =============== Code block layout =============== */
+
+pre {
+  overflow-x: auto;
+}
+
+/* =============== Project card example layout =============== */
+
+.project-card {
+  max-width: 420px;
+}
+
+/* =============== Heading example spacing =============== */
+
+.heading-examples h1,
+.heading-examples h2,
+.heading-examples h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* =============== Responsive =============== */
+
+@media (max-width: 600px) {
+  header,
+  main {
+    width: 100%;
+  }
+
+  main {
+    margin-bottom: 56px;
+  }
+
+  section {
+    margin-bottom: 48px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .element {
+    margin: 28px 0;
+    padding-bottom: 20px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
