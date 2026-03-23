@@ -1,0 +1,294 @@
+/* =============== Base styles =============== */
+
+body {
+  font-family: 'Forum', serif;
+  margin: 20px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Shared heading styles */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bodoni Moda', serif;
+  color: #222;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+p,
+li,
+a,
+button {
+  font-size: 1.05rem;
+}
+
+/* =============== Header =============== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f9f9f9e1;
+  padding: 10px 0 18px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  margin: 0;
+  max-width: 700px;
+}
+
+/* =============== Main layout =============== */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+
+section {
+  margin-bottom: 64px;
+}
+
+/* section headings like your portfolio */
+#interactive_elements > h2,
+#text_elements > h2,
+#combined_elements > h2,
+#branding > h2 {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+#interactive_elements > h2::after,
+#text_elements > h2::after,
+#combined_elements > h2::after,
+#branding > h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: #000;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* =============== Element blocks =============== */
+
+.element {
+  margin: 40px 0;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #ddd;
+}
+
+.element:last-child {
+  border-bottom: none;
+}
+
+/* =============== Navigation =============== */
+
+nav {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #616161;
+  font-style: italic;
+}
+
+nav a:active {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #444;
+}
+
+
+/* =============== Links =============== */
+
+a {
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #616161;
+  font-style: italic;
+}
+
+a:active {
+  text-decoration: line-through;
+  color: #444;
+}
+
+/* =============== Buttons =============== */
+
+.button,
+button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 28px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Forum', serif;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+
+  font-style: italic;
+  padding-right: 36px;
+}
+
+.button::after,
+button::after {
+  content: ' →';
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  transition: opacity 0.25s ease;
+}
+
+.button:hover::after,
+button:hover::after {
+  opacity: 1;
+}
+
+.button:active,
+button:active {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* =============== Code Blocks =============== */
+
+pre {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 12px 0 20px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* =============== Lists =============== */
+
+ul {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* =============== Project card example =============== */
+
+.project-card {
+  max-width: 420px;
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  margin-bottom: 16px;
+}
+
+/* =============== Heading examples =============== */
+
+.heading-examples h1,
+.heading-examples h2,
+.heading-examples h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* =============== Responsive =============== */
+
+@media (max-width: 600px) {
+  body {
+    margin: 12px;
+  }
+
+  header {
+    padding-bottom: 14px;
+    margin-bottom: 28px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    gap: 14px;
+    font-size: 1rem;
+  }
+
+  main {
+    margin-bottom: 56px;
+  }
+
+  section {
+    margin-bottom: 48px;
+  }
+}
