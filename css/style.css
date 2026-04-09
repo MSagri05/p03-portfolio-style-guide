@@ -2,7 +2,8 @@
 
 body {
   font-family: 'Forum', serif;
-  line-height: 1.9;
+  font-size: 1.1rem;
+  line-height: 1.7;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -689,4 +690,132 @@ code {
   font-size: 1.1rem;
   color: #fff;
   letter-spacing: 0.5px;
+}
+/* =============== Project detail — updated styles =============== */
+
+.pd-label {
+  font-family: 'Forum', serif;
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 10px;
+}
+
+.pd-phase-label {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 6px;
+}
+
+.pd-desc-label {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 12px;
+}
+
+.pd-stats {
+  display: flex;
+  gap: 24px;
+  margin: 20px 0 24px;
+  flex-wrap: wrap;
+}
+
+.pd-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-stat-value {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.5rem;
+  color: #222;
+  line-height: 1;
+}
+
+.pd-stat-label {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.pd-note {
+  font-family: 'Forum', serif;
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 8px;
+  border-left: 2px solid #ddd;
+  padding-left: 14px;
+}
+
+.pd-list {
+  font-family: 'Forum', serif;
+  color: #444;
+  padding-left: 20px;
+  margin: 12px 0 0;
+  line-height: 1.8;
+}
+
+.pd-list li {
+  margin-bottom: 4px;
+}
+
+.pd-problem {
+  border-top: 1px solid #eee;
+  padding: 28px 0;
+}
+
+.pd-problem:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.pd-problem-label {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 6px;
+}
+
+.pd-problem-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.15rem;
+  color: #222;
+  margin: 0 0 10px;
+}
+
+.pd-problem-body {
+  font-family: 'Forum', serif;
+  color: #555;
+  margin: 0;
+  max-width: 66ch;
+}
+
+.pd-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin-top: 24px;
+}
+
+.pd-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
