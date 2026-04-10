@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embark Website Redesign — Manmeet Sagri</title>
+  <title>Embark Website Redesign · Manmeet Sagri</title>
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="css/style.css">
@@ -36,6 +36,7 @@
       </video>
     </section>
 
+    <!-- Project Overview -->
     <section class="pd-hero" id="overview">
       <div class="pd-left">
         <p class="pd-label">IAT 235 · Information Design</p>
@@ -47,8 +48,8 @@
             <span class="pd-stat-label">Team Members</span>
           </div>
           <div class="pd-stat">
-            <span class="pd-stat-value">Responsive</span>
-            <span class="pd-stat-label">Layout</span>
+            <span class="pd-stat-value">CSS</span>
+            <span class="pd-stat-label">My Lead</span>
           </div>
           <div class="pd-stat">
             <span class="pd-stat-value">Client</span>
@@ -61,153 +62,177 @@
         </div>
 
         <p class="pd-meta"><em>November – December 2024</em></p>
-        <p class="pd-meta"><strong>Team:</strong> Manmeet Sagri, Hind Hammad, Yilin Gao</p>
-        <p class="pd-meta"><strong>Role:</strong> UX/UI Designer &amp; Front-End Developer</p>
+        <p class="pd-meta"><strong>Team:</strong> 3 members</p>
+        <p class="pd-meta"><strong>My Role:</strong> CSS Styling, Wireframing &amp; Visual Design</p>
         <p class="pd-meta"><strong>Tools:</strong> HTML, CSS, Figma</p>
       </div>
 
       <div class="pd-right">
         <p class="pd-desc-label">What is it?</p>
         <p>
-          A responsive website redesign created for Embark Sustainability Society as part of IAT 235.
-          The project focused on transforming Embark’s Sustainable Project Funding Opportunities spreadsheet
-          into a cleaner and more usable web experience.
+          A client-facing website redesign for Embark Sustainability Society, completed as part of IAT 235.
+          The goal was to transform their Sustainable Project Funding Opportunities spreadsheet into a clear,
+          navigable, and accessible web experience.
         </p>
         <p>
-          Since this was one of my earlier design projects, the final solution stayed intentionally simple.
-          My focus was on learning how to think more like a designer by understanding users, organizing content,
-          working within an existing brand identity, and turning wireframes into a working website.
+          This was a team project with a real client. We worked through a full design process including
+          wireframing, client feedback sessions with Embark volunteers, Figma prototyping, and front-end
+          development. I led the CSS implementation and contributed to wireframing and HTML content throughout.
         </p>
       </div>
     </section>
 
+    <!-- Process -->
     <section class="pd-process" id="process">
       <h3 class="section-title">The Process</h3>
 
-      <article class="pd-step" id="research">
+      <article class="pd-step" id="wireframing">
         <p class="pd-phase-label">Phase 1</p>
-        <h4>Understanding the Content &amp; Planning the Direction</h4>
+        <h4>Wireframing</h4>
         <div class="pd-grid">
-          <img src="images/wireframeSketch.png" alt="Early hand-drawn sketches exploring layout ideas for the Embark website redesign">
-          <img src="images/figmaWireframe.png" alt="Low-fidelity Figma wireframes exploring content organization and page structure">
+          <div class="pd-img-wrap">
+            <img src="images/wireframeSketch.png" alt="Early hand-drawn wireframe sketches exploring layout ideas for the Embark redesign">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/figmaWireframe.png" alt="Digital Figma wireframe that was flagged for being too detailed and close to a prototype">
+          </div>
         </div>
         <p>
-          I began by looking closely at Embark’s original spreadsheet and identifying what made it harder to use.
-          Although it contained valuable information, it felt dense, visually overwhelming, and difficult to scan
-          quickly.
+          Each team member began by sketching wireframes independently to explore different layout ideas
+          for presenting the funding information. We then moved into Figma to create a digital version.
         </p>
         <p>
-          This helped me understand an important early design lesson: good design is not just about making something
-          look better, but about making information easier for people to understand and navigate. From the start,
-          I knew the redesign needed stronger hierarchy, simpler grouping, and clearer structure.
+          Our professor flagged that our Figma wireframe was too close to a finished prototype. It included
+          interactable elements, real images, and detailed styling instead of staying rough and structural.
+          A proper wireframe uses placeholder boxes, crosses for images, and focuses on layout only.
+          We understood the feedback, but due to timeline constraints we moved forward rather than revising.
+          It was an important lesson about the distinction between wireframing and prototyping.
+        </p>
+        <p class="pd-note">
+          Wireframes communicate structure. Prototypes communicate look and feel. Conflating the two
+          skips a valuable stage of iteration.
         </p>
       </article>
 
-      <article class="pd-step" id="wireframing">
+      <article class="pd-step" id="content">
         <p class="pd-phase-label">Phase 2</p>
-        <h4>Wireframing &amp; Prototyping</h4>
+        <h4>HTML Content &amp; Client Feedback</h4>
         <div class="pd-grid">
-          <img src="images/wireframeSketch.png" alt="Hand-drawn wireframe sketches for the Embark site redesign">
-          <img src="images/figmaWireframe.png" alt="Digital wireframes in Figma exploring layout and navigation ideas">
+          <div class="pd-img-wrap">
+            <img src="images/week2Progress.png" alt="In-progress HTML build of the Embark website showing content structure">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/indexCode.png" alt="HTML code showing the structure of the Embark funding page">
+          </div>
         </div>
         <p>
-          One of the biggest takeaways from this project was learning how to move from ideas into structure.
-          I explored layouts through sketches first, then used Figma to help turn those ideas into clearer digital
-          wireframes.
+          My teammate and I worked collaboratively on the HTML, building out the content structure and
+          populating the funding information from Embark's spreadsheet. We organized the grants into
+          sections by funding amount, each with consistent labels for description, requirements, deadlines,
+          and a learn more link.
         </p>
         <p>
-          This stage taught me how wireframing helps simplify decision-making before development begins.
-          It also introduced me to the design workflow more seriously: thinking about user needs, organizing content,
-          testing structure, and building toward a prototype rather than jumping straight into code.
+          Throughout this phase we received active feedback from Embark volunteers. Their input helped us
+          refine the content hierarchy, improve label clarity, and make sure the information felt
+          useful and easy to navigate for their actual users.
+        </p>
+      </article>
+
+      <article class="pd-step" id="prototype">
+        <p class="pd-phase-label">Phase 3</p>
+        <h4>Figma Prototype &amp; Visual Direction</h4>
+        <div class="pd-grid">
+          <div class="pd-img-wrap">
+            <img src="images/finalPrototype.png" alt="Final Figma prototype applying Embark's brand colors, logo, and visual identity">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/figmaWireframe.png" alt="Figma design showing layout and color application using Embark brand assets">
+          </div>
+        </div>
+        <p>
+          With the content structure settled, I built the Figma prototype applying Embark's provided
+          brand assets: their color palette, logo, and typography guidelines. This prototype served
+          as the visual reference for CSS development, giving the team a clear guide before writing
+          any styling code.
         </p>
       </article>
 
       <article class="pd-step" id="development">
-        <p class="pd-phase-label">Phase 3</p>
-        <h4>Visual Design &amp; Front-End Development</h4>
-        <div class="pd-grid">
-          <img src="images/week2Progress.png" alt="In-progress HTML and CSS build of the Embark website redesign">
-          <img src="images/indexCode.png" alt="HTML and CSS code used while developing the Embark redesign">
-        </div>
-        <p>
-          My main contribution was in the visual design direction and front-end styling. I focused on refining layouts,
-          spacing, and hierarchy so the interface felt cleaner while still staying aligned with Embark’s brand identity.
-          Since this was an earlier design project, I intentionally kept the visual approach simple rather than
-          overdesigning it.
-        </p>
-        <p>Key contributions:</p>
-        <ul class="pd-list">
-          <li>Refined the visual hierarchy and layout using CSS</li>
-          <li>Worked with Embark’s color palette, branding, and existing visual identity</li>
-          <li>Helped shape the final prototype direction in Figma</li>
-          <li>Contributed to turning the prototype into a functional responsive website</li>
-        </ul>
-      </article>
-
-      <article class="pd-step" id="testing">
         <p class="pd-phase-label">Phase 4</p>
-        <h4>Refinement, Responsiveness &amp; Team Collaboration</h4>
+        <h4>CSS Implementation</h4>
         <div class="pd-grid">
-          <img src="images/finalPrototype.png" alt="Final Figma prototype for the Embark website redesign">
-          <img src="images/finalWeb.png" alt="Final responsive website redesign for Embark Sustainability Society">
+          <div class="pd-img-wrap">
+            <img src="images/week2Progress.png" alt="CSS styled Embark website showing the two-column grant card layout">
+          </div>
+          <div class="pd-img-wrap">
+            <img src="images/finalWeb.png" alt="Final styled Embark website showing responsive layout across the funding sections">
+          </div>
         </div>
         <p>
-          As the website came together, I refined the interface by paying closer attention to spacing, readability,
-          and overall clarity. I wanted the final design to feel approachable and easy to navigate, especially compared
-          to the original spreadsheet format.
+          I led the CSS for the project. Key decisions and systems I built:
         </p>
-        <p>
-          This project also taught me a lot about working in a team. It was one of my first experiences moving through
-          a fuller design process with others, from early discussion and wireframing to prototyping and final
-          development. It gave me a much better understanding of how collaboration shapes stronger design outcomes.
-        </p>
+        <ul class="pd-list">
+          <li>CSS Grid for the grant card layout, splitting each funding section into a two-column structure at wider viewports</li>
+          <li>Flexbox for the sticky header navigation and the horizontal scrolling funding category nav</li>
+          <li>Three responsive breakpoints at 50rem, 62rem, and 90rem to scale typography, spacing, and layout</li>
+          <li>Linear gradient backgrounds using Embark's green palette to create the homepage hero visual</li>
+          <li>A CSS scroll animation on the category nav hint text using keyframes and translateX</li>
+          <li>Consistent color application across all grant sections using Embark's brand values</li>
+          <li>Hover and focus states on all interactive elements for accessibility</li>
+        </ul>
       </article>
     </section>
 
+    <!-- Reflection -->
     <section class="section-spaced" id="reflection">
       <h3 class="section-title">Problems &amp; Reflection</h3>
 
       <div class="pd-problem">
         <p class="pd-problem-label">Problem</p>
-        <p class="pd-problem-title">The original spreadsheet was informative, but hard to scan and visually overwhelming.</p>
+        <p class="pd-problem-title">Our wireframe skipped straight to prototype-level detail.</p>
         <p class="pd-problem-body">
-          One of the first challenges was understanding how to translate dense spreadsheet content into a more usable
-          website without losing important details. This pushed me to think more carefully about hierarchy, layout,
-          and how users move through information.
+          The Figma wireframe we submitted was flagged by our professor for being too polished. It included
+          real images, interactive elements, and styled components. These belong in a prototype, not
+          a wireframe. We understood the distinction after the feedback but moved forward due to time.
+          Going forward, I now treat wireframing as a separate, deliberately rough stage.
         </p>
       </div>
 
       <div class="pd-problem">
         <p class="pd-problem-label">Problem</p>
-        <p class="pd-problem-title">Keeping the design simple while still matching the brand required restraint.</p>
+        <p class="pd-problem-title">Translating a dense spreadsheet into scannable sections required real decisions.</p>
         <p class="pd-problem-body">
-          Since this was an earlier design project, I was still learning how to balance creativity with clarity.
-          Instead of trying to make the site overly complex, I focused on matching Embark’s identity, using their
-          colors thoughtfully, and building something clean, readable, and functional.
+          The original content had no visual hierarchy. I had to decide what information to foreground,
+          how to group related details, and what visual cues would help users scan quickly. I used
+          card-based grouping, consistent heading labels, and inline deadline formatting to create
+          structure the spreadsheet was missing.
         </p>
       </div>
 
       <div class="pd-problem">
         <p class="pd-problem-label">Feedback</p>
-        <p class="pd-problem-title">This project helped me build my foundation as a designer.</p>
+        <p class="pd-problem-title">The site was praised for being simple, accessible, and easy to navigate.</p>
         <p class="pd-problem-body">
-          More than anything, this project introduced me to the basic mindset behind design work. It helped me
-          understand how designers think about users, wireframes, prototypes, branding, and actual development,
-          instead of seeing design as just the final visual layer.
+          We received positive feedback for keeping the redesign clean and focused. The professor noted
+          the site made scholarship information significantly easier to find and understand compared
+          to the original spreadsheet. The client feedback sessions throughout the process helped
+          us stay aligned with what Embark's users actually needed.
         </p>
       </div>
 
       <div class="pd-problem">
         <p class="pd-problem-label">What I Learned</p>
-        <p class="pd-problem-title">Simple work can still be strong when it is thoughtful, clear, and user-focused.</p>
+        <p class="pd-problem-title">Each design stage has a purpose. Skipping one costs you later.</p>
         <p class="pd-problem-body">
-          This project gave me foundational experience in user-centered thinking, collaborative design, and front-end
-          implementation. It taught me how to work within an existing visual identity, how to translate ideas from
-          wireframes into code, and how much I enjoy the full process of designing and building digital experiences.
+          The wireframe feedback was the biggest lesson of this project. Wireframes exist to test
+          structure without getting attached to visuals. When we jumped ahead, we lost that iteration
+          opportunity. I also learned how much more confident CSS feels when you have a solid prototype
+          to work from. The design decisions are already made, and implementation becomes translation.
         </p>
       </div>
     </section>
 
+    <!-- Video -->
     <section class="section-spaced" id="demo">
       <h3 class="section-title">Watch the Website Walkthrough</h3>
       <div class="pd-video-wrap">

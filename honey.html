@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Honey Harvest Simulation — Manmeet Sagri</title>
+  <title>Honey Harvest Simulation · Manmeet Sagri</title>
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="css/style.css">
@@ -91,15 +91,10 @@
           <img src="images/mainElements.png" alt="Planning document showing key simulation elements and structure">
         </div>
         <p>
-          Before building the simulation, I planned a simple but engaging interaction loop with clear stages:
-          intro, hive interaction, queen bee capture, brewing, honey collection, and restart. I wanted the
-          project to feel more like a guided experience than a disconnected set of actions, so I mapped how
-          each interaction would unlock the next.
-        </p>
-        <p>
-          This planning stage also helped me organize the code structure early. I identified the main classes,
-          shared behaviors, and state changes before development, which made the final system much easier to build
-          and debug.
+          I mapped the full interaction loop before writing a line of code: intro, hive opening, queen
+          capture, brewing, honey collection, and restart. Each stage had to unlock the next in a way
+          that felt guided rather than arbitrary. Identifying the main classes and state transitions
+          early made the final system much easier to build and debug.
         </p>
       </article>
 
@@ -135,13 +130,13 @@
         </p>
         <p>Key systems I implemented:</p>
         <ul class="pd-list">
-          <li>A 7-state interaction flow covering intro, hive opening, queen capture, brewing, honey collection, and restart</li>
-          <li>Click and drag interactions for the net and honey jar</li>
-          <li>Bounding box collision detection for capturing the queen bee and collecting honey</li>
-          <li>Animated queen and worker bees using image-sequence toggling</li>
-          <li>Custom button classes for reusable start and restart interactions</li>
-          <li>Sound design using Minim for background music and interactive feedback</li>
-          <li>A full reset system that restores the simulation to its starting state</li>
+          <li>7 simulation states managed in <code>HoneyPanel</code> via a Swing <code>Timer</code> at 30ms intervals</li>
+          <li>17 Java files across 4 packages: <code>main</code>, <code>garden</code>, <code>Effects</code>, <code>Buttons</code></li>
+          <li>Abstract <code>BaseButton</code> class extended by <code>HiveBox</code>, <code>Net</code>, <code>HoneyJar</code>, <code>BeeNest</code>, <code>StartButton</code>, and <code>RestartButton</code></li>
+          <li><code>WorkerBee</code> extends <code>Bee</code>, both using 2-frame image-sequence wing animation</li>
+          <li>Bounding box collision via <code>Rectangle2D.intersects()</code> for net catching the queen</li>
+          <li>8 separate Minim audio files for music, sound effects, and transitions</li>
+          <li>Full <code>restartGame()</code> method resetting all object positions, states, and audio</li>
         </ul>
       </article>
 
@@ -153,14 +148,16 @@
           <img src="images/honeyCode.png" alt="Code implementing recursive bee swarm and golden brewing effects">
         </div>
         <p>
-          The most experimental part of the project was creating the bee swarm and brewing effects. I wanted the
-          brewing stage to feel magical and alive rather than static, so I built a recursive bee swarm effect and
-          a golden brewing effect using Perlin noise-inspired motion.
+          The swarm effect uses a recursive fractal algorithm. Each call draws a translucent ellipse then
+          branches into 6 children at depth 4, creating an organic burst pattern around the queen bee.
+          Getting the depth, radius decay, and transparency right took significant iteration before it
+          felt expressive rather than chaotic.
         </p>
         <p>
-          I tested these effects through repeated iteration, adjusting timing, growth, transparency, and movement
-          until they felt integrated into the rest of the simulation. I also refined the instruction text, drag logic,
-          and transitions so the experience felt clear and rewarding from beginning to end.
+          The brewing effect uses Perlin noise via Processing's <code>PApplet</code> to drive 25 golden
+          blobs rising from the hive over 30 seconds. A sine wave overlay simulates a day and night
+          cycle during the wait, giving the brewing stage a sense of time passing rather than just a
+          loading screen.
         </p>
       </article>
     </section>
@@ -191,11 +188,12 @@
 
       <div class="pd-problem">
         <p class="pd-problem-label">Feedback</p>
-        <p class="pd-problem-title">Creating my own assets made the project feel more original and cohesive.</p>
+        <p class="pd-problem-title">Designing all assets myself was flagged as a strength.</p>
         <p class="pd-problem-body">
-          One of the strongest parts of this project was that the programming and visual design supported each other.
-          Since I created the assets myself in Figma and Sketch.io, the final simulation felt much more personal,
-          polished, and aligned with the playful concept I had in mind.
+          The professor and TA noted that creating original assets in Figma and Sketch.io gave the
+          simulation a cohesive and polished identity that stood out. This was a direct contrast to
+          my earlier Aladdin project, where I relied more on external sources. The feedback confirmed
+          that the visual and technical work supported each other in a way that felt intentional.
         </p>
       </div>
 
@@ -226,7 +224,7 @@
 
   <footer class="site-footer">
     <p>
-      <a href="mailto:mks52@sfu.ca">Email</a> ·
+      <a href="/cdn-cgi/l/email-protection#bad7d1c98f88fac9dccf94d9db">Email</a> ·
       <a href="https://www.linkedin.com/in/manmeet-sagri-5616271a7" target="_blank"
         aria-label="LinkedIn (opens in new tab)">LinkedIn</a> ·
       <a href="https://github.com/MSagri05" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a> ·
