@@ -1,5 +1,115 @@
 console.log("main.js loaded");
 
+// ============================================
+// Card stack swipe (about.html)
+// ============================================
+(function setupCardStack() {
+  var stack = document.getElementById("cardStack");
+  if (!stack) return;
+
+  var cards = Array.from(stack.querySelectorAll(".photo-card"));
+
+  function updateStack() {
+    cards.forEach(function (card, i) {
+      var fromTop = cards.length - 1 - i;
+      card.style.zIndex = String(i + 1);
+      card.style.transition = "transform 0.3s ease";
+      if (fromTop === 0) {
+        card.style.transform = "rotate(0deg) translate(0px, 0px)";
+      } else if (fromTop === 1) {
+        card.style.transform = "rotate(-3deg) translate(-6px, 8px)";
+      } else if (fromTop === 2) {
+        card.style.transform = "rotate(2deg) translate(4px, 16px)";
+      } else if (fromTop === 3) {
+        card.style.transform = "rotate(-1.5deg) translate(-3px, 24px)";
+      } else {
+        card.style.transform = "rotate(1deg) translate(2px, 32px)";
+      }
+    });
+  }
+
+  updateStack();
+
+  var startX = 0, startY = 0, moveX = 0, moveY = 0;
+  var dragging = false;
+  var activeCard = null;
+
+  function getTopCard() {
+    return cards[cards.length - 1];
+  }
+
+  stack.addEventListener("mousedown", function (e) {
+    activeCard = getTopCard();
+    if (!activeCard) return;
+    dragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    activeCard.style.transition = "none";
+    stack.classList.add("is-dragging");
+  });
+
+  stack.addEventListener("touchstart", function (e) {
+    activeCard = getTopCard();
+    if (!activeCard) return;
+    dragging = true;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    activeCard.style.transition = "none";
+    stack.classList.add("is-dragging");
+  }, { passive: true });
+
+  window.addEventListener("mousemove", function (e) {
+    if (!dragging || !activeCard) return;
+    moveX = e.clientX - startX;
+    moveY = e.clientY - startY;
+    var rotate = moveX * 0.07;
+    activeCard.style.transform = "translate(" + moveX + "px, " + moveY + "px) rotate(" + rotate + "deg)";
+  });
+
+  window.addEventListener("touchmove", function (e) {
+    if (!dragging || !activeCard) return;
+    if (e.cancelable) e.preventDefault();
+    moveX = e.touches[0].clientX - startX;
+    moveY = e.touches[0].clientY - startY;
+    var rotate = moveX * 0.07;
+    activeCard.style.transform = "translate(" + moveX + "px, " + moveY + "px) rotate(" + rotate + "deg)";
+  }, { passive: false });
+
+  window.addEventListener("mouseup", onDragEnd);
+  window.addEventListener("touchend", onDragEnd);
+
+  function onDragEnd() {
+    if (!dragging || !activeCard) return;
+    dragging = false;
+    stack.classList.remove("is-dragging");
+
+    if (Math.abs(moveX) > 80) {
+      var dir = moveX > 0 ? 1 : -1;
+      var savedY = moveY;
+      var card = activeCard;
+      card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+      card.style.opacity = "0";
+      card.style.transform = "translate(" + (dir * 700) + "px, " + savedY + "px) rotate(" + (dir * 25) + "deg)";
+
+      setTimeout(function () {
+        card.style.transition = "none";
+        card.style.opacity = "1";
+        card.style.transform = "";
+        cards.pop();
+        cards.unshift(card);
+        updateStack();
+      }, 360);
+    } else {
+      activeCard.style.transition = "transform 0.25s ease";
+      activeCard.style.transform = "rotate(0deg) translate(0px, 0px)";
+    }
+
+    moveX = 0;
+    moveY = 0;
+    activeCard = null;
+  }
+})();
+
 //
 // Create the "Back to Top" button
 // learnt from: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
