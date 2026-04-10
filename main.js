@@ -46,18 +46,53 @@ const isHome =
   window.location.pathname.endsWith("/index.html") ||
   window.location.pathname.endsWith("index.html");
 
-if (isHome && nameEl) {
-  const fullText = "Manmeet\u00A0Sagri";
-  nameEl.textContent = "";
-  let i = 0;
+//
+// Looping typewriter tagline on index.html
+//
+const taglineEl = document.querySelector(".intro-text .tagline");
 
-  (function type() {
-    if (i < fullText.length) {
-      nameEl.textContent += fullText[i];
-      i++;
-      setTimeout(type, 150);
+if (isHome && taglineEl) {
+  const roles = [
+    "Front-End Developer",
+    "UX Designer",
+    "Creative Coder",
+    "SIAT Student"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  const typeSpeed = 100;
+  const deleteSpeed = 60;
+  const pauseAfterType = 1800;
+  const pauseAfterDelete = 400;
+
+  function typeLoop() {
+    const currentRole = roles[roleIndex];
+
+    if (!deleting) {
+      taglineEl.textContent = currentRole.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === currentRole.length) {
+        deleting = true;
+        setTimeout(typeLoop, pauseAfterType);
+        return;
+      }
+      setTimeout(typeLoop, typeSpeed);
+    } else {
+      taglineEl.textContent = currentRole.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeLoop, pauseAfterDelete);
+        return;
+      }
+      setTimeout(typeLoop, deleteSpeed);
     }
-  })();
+  }
+
+  typeLoop();
 }
 
 

@@ -819,3 +819,30 @@ code {
   height: 100%;
   border: none;
 }
+/* =============== Index tagline typewriter =============== */
+
+.intro-text .tagline {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 12px;
+  min-height: 1.4em;
+  border-right: 2px solid #222;
+  display: inline-block;
+  padding-right: 3px;
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { border-color: #222; }
+  50%       { border-color: transparent; }
+}
+
+.intro-text .hook {
+  font-family: 'Forum', serif;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
