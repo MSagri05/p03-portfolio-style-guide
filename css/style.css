@@ -187,12 +187,43 @@ nav a[aria-current="page"] {
 
 .photo-card {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   background: #eee;
-  cursor: grab;
 }
 
-.photo-card:active {
+.photo-card:nth-child(2) { transform: rotate(-3deg) translateY(6px); }
+.photo-card:nth-child(3) { transform: rotate(2deg) translateY(12px); }
+.photo-card:nth-child(4) { transform: rotate(-1.5deg) translateY(18px); }
+.photo-card:nth-child(5) { transform: rotate(1deg) translateY(24px); }
+.photo-card:nth-child(6) { transform: rotate(-2deg) translateY(30px); }
+
+.photo-card.is-top {
+  cursor: grab;
+  z-index: 10;
+  transform: rotate(0deg) translateY(0);
+}
+
+.photo-card.is-top:active {
   cursor: grabbing;
+}
+
+.photo-card.is-dragging {
+  transition: none;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card.is-dismissing {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.card-stack-hint {
+  font-family: 'Forum', serif;
+  font-size: 0.78rem;
+  color: #bbb;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  pointer-events: none;
 }
 
 .card-stack-hover-hint {
@@ -207,6 +238,7 @@ nav a[aria-current="page"] {
   pointer-events: none;
   transition: opacity 0.2s ease;
   z-index: 20;
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .card-stack:hover .card-stack-hover-hint {
