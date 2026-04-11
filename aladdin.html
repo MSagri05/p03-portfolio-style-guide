@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aladdin's Treasure Hunt — Manmeet Sagri</title>
-
+ 
   <!-- stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
-
+ 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Forum&display=swap"
     rel="stylesheet">
 </head>
-
+ 
 <body>
-
+ 
   <header>
     <h1>MANMEET SAGRI</h1>
     <nav>
@@ -25,21 +25,21 @@
       <a href="about.html">About Me</a>
     </nav>
   </header>
-
+ 
   <main class="project-detail">
-
+ 
     <a href="projects.html" class="back-link">← Back to Projects</a>
-
+ 
     <section class="mini-video-hero" aria-label="Aladdin gameplay preview video">
       <video autoplay muted loop playsinline>
         <source src="videos/aladdin-demo.mp4" type="video/mp4">
       </video>
     </section>
-
+ 
     <section class="pd-hero" id="overview">
       <div class="pd-left">
         <p class="pd-label">IAT 167 · Digital Games</p>
-        <h2 class="pd-title">Aladdin's<br>Treasure Hunt</h2>
+        <h2 class="pd-title">Aladdin's Treasure Hunt</h2>
         <div class="pd-stats">
           <div class="pd-stat">
             <span class="pd-stat-value">15</span>
@@ -62,7 +62,7 @@
         <p class="pd-meta"><strong>Role:</strong> Game Designer &amp; Developer</p>
         <p class="pd-meta"><strong>Tools:</strong> Processing (Java), Figma, Sketch.io</p>
       </div>
-
+ 
       <div class="pd-right">
         <p class="pd-desc-label">What is it?</p>
         <p>
@@ -76,12 +76,12 @@
         </p>
       </div>
     </section>
-
+ 
     <section class="pd-process" id="process">
       <h3 class="section-title">The Process</h3>
-
+ 
       <article class="pd-step" id="planning">
-        <p class="pd-phase-label">Phase 1</p>
+        <span class="pd-phase-label">Phase 1</span>
         <h4>Concept &amp; Planning</h4>
         <div class="pd-grid">
           <img src="images/storyboard.png" alt="Storyboard sketches mapping out Aladdin's level ideas and narrative">
@@ -94,9 +94,9 @@
           stayed organized and extendable throughout development.
         </p>
       </article>
-
+ 
       <article class="pd-step" id="assets">
-        <p class="pd-phase-label">Phase 2</p>
+        <span class="pd-phase-label">Phase 2</span>
         <h4>Asset Design</h4>
         <div class="pd-grid">
           <img src="images/assets.png" alt="Assets and audio folder showing organized sprites, sequences, and sounds">
@@ -112,9 +112,9 @@
           will prioritize original work from the start.
         </p>
       </article>
-
+ 
       <article class="pd-step" id="development">
-        <p class="pd-phase-label">Phase 3</p>
+        <span class="pd-phase-label">Phase 3</span>
         <h4>Core Development</h4>
         <div class="pd-grid">
           <img src="images/code.png"
@@ -126,16 +126,16 @@
         <ul class="pd-list">
           <li>A 6-state game state machine (title, instructions, 3 levels, victory, death)</li>
           <li>Procedural block generation that spawns and despawns blocks as the player moves</li>
-          <li>Three block types: standard, <em>MovingBlock</em>, and <em>SlipperyBlock</em></li>
+          <li>Three block types: standard, <code>MovingBlock</code>, and <code>SlipperyBlock</code></li>
           <li>Enemy AI with snakes pacing their assigned block; 10 in Level 2, 20 in Level 3</li>
           <li>Health system with token pickups and continuous damage on enemy contact</li>
           <li>Sound management via Minim covering music, transitions, coins, death, and victory</li>
           <li>8-frame animated sprites and a full Play Again reset function</li>
         </ul>
       </article>
-
+ 
       <article class="pd-step" id="testing">
-        <p class="pd-phase-label">Phase 4</p>
+        <span class="pd-phase-label">Phase 4</span>
         <h4>Level Escalation &amp; Testing</h4>
         <div class="pd-grid">
           <img src="images/level2.png" alt="Screen showing a message that user has secured the key and is ready to progress to level 2">
@@ -153,12 +153,12 @@
         </p>
       </article>
     </section>
-
+ 
     <section class="section-spaced" id="reflection">
       <h3 class="section-title">Problems &amp; Reflection</h3>
-
+ 
       <div class="pd-problem">
-        <p class="pd-problem-label">Problem</p>
+        <span class="pd-problem-label">Problem</span>
         <p class="pd-problem-title">Collision detection with moving enemies was inaccurate.</p>
         <p class="pd-problem-body">
           Enemy positions needed to account for the world scroll offset. I resolved this by computing
@@ -166,9 +166,9 @@
           from Aladdin/Enemy collision into two overloaded <code>checkCollision()</code> methods.
         </p>
       </div>
-
+ 
       <div class="pd-problem">
-        <p class="pd-problem-label">Problem</p>
+        <span class="pd-problem-label">Problem</span>
         <p class="pd-problem-title">Block clustering made early levels unplayable.</p>
         <p class="pd-problem-body">
           Procedural generation placed blocks too close together. I added a minimum distance check
@@ -176,9 +176,9 @@
           until a valid position is found.
         </p>
       </div>
-
+ 
       <div class="pd-problem">
-        <p class="pd-problem-label">Feedback</p>
+        <span class="pd-problem-label">Feedback</span>
         <p class="pd-problem-title">Aladdin couldn't fight back, only avoid.</p>
         <p class="pd-problem-body">
           The health system meant taking damage was passive. With more time, I would have added a projectile
@@ -186,9 +186,9 @@
           but the feedback sharpened how I scope future projects.
         </p>
       </div>
-
+ 
       <div class="pd-problem">
-        <p class="pd-problem-label">What I Learned</p>
+        <span class="pd-problem-label">What I Learned</span>
         <p class="pd-problem-title">Planning pays off. Documentation matters.</p>
         <p class="pd-problem-body">
           The UML diagram directly reduced debugging time. Working solo on a 15-class system taught me
@@ -197,7 +197,7 @@
         </p>
       </div>
     </section>
-
+ 
     <section class="section-spaced" id="demo">
       <h3 class="section-title">Watch the Full Gameplay</h3>
       <div class="pd-video-wrap">

@@ -791,6 +791,7 @@ code {
 }
 
 .pd-phase-label {
+  display: block;
   font-family: 'Forum', serif;
   font-size: 0.78rem;
   color: #999;
@@ -868,6 +869,7 @@ code {
 }
 
 .pd-problem-label {
+  display: block;
   font-family: 'Forum', serif;
   font-size: 0.78rem;
   color: #999;
