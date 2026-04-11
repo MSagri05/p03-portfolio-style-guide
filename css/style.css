@@ -209,7 +209,7 @@ a.view-resume-btn {
 .photo-card.is-top {
   cursor: grab;
   z-index: 10;
-  transform: rotate(0deg) translateY(0);
+  transform: rotate(0) translateY(0);
 }
 
 .photo-card.is-top:active {
@@ -943,4 +943,24 @@ code {
   color: #aaa;
   font-size: 0.98rem;
   margin-top: 4px;
+}
+
+/* =============== Focus styles =============== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}
+
+/* =============== Slides section =============== */
+
+.slides-intro {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.slide-counter {
+  margin-top: 0.75rem;
+  text-align: center;
 }
