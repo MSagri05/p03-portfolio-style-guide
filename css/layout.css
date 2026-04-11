@@ -92,8 +92,16 @@ main {
   margin: 0 0 10px;
 }
 
+.intro-text p.tagline {
+  min-height: 1.7em;
+}
+
 .intro-text p {
   font-size: 1.1rem;
+}
+
+.intro-text p.hook {
+  max-width: 50ch;
 }
 
 /* =============== Primary button =============== */

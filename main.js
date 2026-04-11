@@ -152,9 +152,9 @@ const nameEl = document.querySelector(".intro-text h2");
 
 
 const isHome =
-  window.location.pathname === "/" ||
-  window.location.pathname.endsWith("/index.html") ||
-  window.location.pathname.endsWith("index.html");
+  !window.location.pathname.endsWith("about.html") &&
+  !window.location.pathname.endsWith("projects.html") &&
+  !window.location.pathname.endsWith("styleGuide.html");
 
 //
 // Looping typewriter tagline on index.html
@@ -166,7 +166,7 @@ if (isHome && taglineEl) {
     "Front-End Developer",
     "UX Designer",
     "Creative Coder",
-    "SIAT Student"
+    "SIAT Student @ SFU"
   ];
 
   let roleIndex = 0;
