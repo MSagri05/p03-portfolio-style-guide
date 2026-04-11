@@ -142,6 +142,12 @@ nav a[aria-current="page"] {
 
 /* =============== Primary button =============== */
 
+a.view-projects-btn,
+a.view-resume-btn {
+  display: inline-block;  /* anchors are inline by default, buttons are block */
+  text-decoration: none;  /* anchors have underline by default */
+}
+
 .view-projects-btn {
   display: inline-block;
   background-color: #000;
@@ -155,9 +161,12 @@ nav a[aria-current="page"] {
 }
 
 .view-projects-btn:hover {
-  background-color: #616161;
   font-style: italic;
   text-decoration: line-through;
+  background-color: #616161;
+  color: #fff;     
+  padding-right: 36px; 
+  
 }
 
 .view-projects-btn::after {
@@ -292,6 +301,9 @@ nav a[aria-current="page"] {
 .view-resume-btn:hover {
   background-color: #616161;
   font-style: italic;
+  text-decoration: line-through;
+  color: #fff;      
+  padding-right: 36px; 
 }
 
 .view-resume-btn::after {
@@ -307,7 +319,7 @@ nav a[aria-current="page"] {
 }
 
 .view-resume-btn:active {
-  text-decoration: line-through;
+  text-decoration: underline;
   color: #ccc;
 }
 
