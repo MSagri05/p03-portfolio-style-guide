@@ -93,7 +93,7 @@ main {
 }
 
 .intro-text p.tagline {
-  min-height: 1.7em;
+  min-height: 2em;
 }
 
 .intro-text p {
@@ -261,15 +261,15 @@ main.project-detail {
 
 .mini-video-hero {
   width: 100%;
-  height: 600px;
+  aspect-ratio: 16 / 9;
   margin-bottom: 40px;
 }
 
 .mini-video-hero video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-
 /* =============== Process section =============== */
 
 .pd-hero {
