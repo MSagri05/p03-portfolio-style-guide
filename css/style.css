@@ -79,6 +79,10 @@ nav a[aria-current="page"] {
   text-underline-offset: 4px;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
 /* =============== Footer =============== */
 
 .site-footer {
@@ -372,6 +376,24 @@ a.view-resume-btn {
 
 .project:hover .overlay {
   opacity: 1;
+}
+
+/* =============== Back to Top Button =============== */
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 25px 15px;
+  font-size: 16px;
+  font-family: 'Forum', serif;
+  border: none;
+  border-radius: 5px;
+  background: #0d0d0c;
+  color: #fff;
+  cursor: pointer;
+  display: none; 
+  z-index: 1000;
 }
 
 /* =============== Project detail =============== */
