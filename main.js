@@ -1,14 +1,33 @@
+// main.js
+// this file handles all interactive elements + animations across my portfolio
+// includes:
+// - card swipe interaction (about page)
+// - back to top button (scroll interaction)
+// - typewriter animation (homepage)
+// - slideshow (glazing guide)
+// - image lightbox (project pages)
+// - project filtering (projects page)
+
+
+
+
 console.log("main.js loaded");
 
-// ============================================
+
 // Card stack swipe (about.html)
-// ============================================
+// learnt this from stack overflow + mdn and adapted it
+// https://stackoverflow.com/questions/15935318/dragging-an-element-across-the-screen
+
+
 (function setupCardStack() {
   var stack = document.getElementById("cardStack");
   if (!stack) return;
 
   var cards = Array.from(stack.querySelectorAll(".photo-card"));
 
+  // used chatgpt to debug issues with this interaction 
+
+  // sets stacked layout using transform (rotate + translate)
   function updateStack() {
     cards.forEach(function (card, i) {
       var fromTop = cards.length - 1 - i;
@@ -38,6 +57,7 @@ console.log("main.js loaded");
     return cards[cards.length - 1];
   }
 
+  // start dragging
   stack.addEventListener("mousedown", function (e) {
     activeCard = getTopCard();
     if (!activeCard) return;
@@ -47,6 +67,7 @@ console.log("main.js loaded");
     activeCard.style.transition = "none";
     stack.classList.add("is-dragging");
   });
+
 
   stack.addEventListener("touchstart", function (e) {
     activeCard = getTopCard();
@@ -58,6 +79,7 @@ console.log("main.js loaded");
     stack.classList.add("is-dragging");
   }, { passive: true });
 
+  // move card
   window.addEventListener("mousemove", function (e) {
     if (!dragging || !activeCard) return;
     moveX = e.clientX - startX;
@@ -83,6 +105,8 @@ console.log("main.js loaded");
     dragging = false;
     stack.classList.remove("is-dragging");
 
+    
+     // if dragged enough ->  swipe away
     if (Math.abs(moveX) > 80) {
       var dir = moveX > 0 ? 1 : -1;
       var savedY = moveY;
@@ -100,6 +124,7 @@ console.log("main.js loaded");
         updateStack();
       }, 360);
     } else {
+        // snap back if not enough movement
       activeCard.style.transition = "transform 0.25s ease";
       activeCard.style.transform = "rotate(0deg) translate(0px, 0px)";
     }
@@ -119,19 +144,7 @@ button.innerText = "↑ Top";
 button.id = "backToTop";
 document.body.appendChild(button);
 
-button.style.position = "fixed";
-button.style.bottom = "20px";
-button.style.right = "20px";
-button.style.padding = "25px 15px";
-button.style.fontSize = "16px";
-button.style.fontFamily = "'Forum', serif";
-button.style.border = "none";
-button.style.borderRadius = "5px";
-button.style.background = "#0d0d0c";
-button.style.color = "#fff";
-button.style.cursor = "pointer";
-button.style.display = "none"; // Hidden by default.. and only appears when you scroll
-button.style.zIndex = "1000";
+
 
 // Show the button only when scrolling down
 window.addEventListener("scroll", () => {
@@ -213,7 +226,7 @@ if (isHome && taglineEl) {
 const slideImg = document.getElementById("gg-slide-image");
 
 if (slideImg) {
-  const totalSlides = 21; // change this if you add/remove slides
+  const totalSlides = 21; 
   let currentSlide = 1;
 
   const counterEl = document.getElementById("gg-slide-counter");
@@ -241,6 +254,8 @@ if (slideImg) {
 
 //
 // click-to-zoom lightbox for project detail images
+// learnt from w3schools modal images
+// https://www.w3schools.com/howto/howto_css_modal_images.asp
 //
 (function setupLightbox() {
   // only run on pages that have project detail layout
@@ -310,6 +325,8 @@ if (slideImg) {
 
 //
 // Project filter buttons (projects.html)
+// learnt from w3schools filter elements
+// https://www.w3schools.com/howto/howto_js_filter_elements.asp
 //
 const filterBtns = document.querySelectorAll('.filter-btn');
 
